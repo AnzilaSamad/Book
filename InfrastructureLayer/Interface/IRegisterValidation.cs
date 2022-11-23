@@ -14,7 +14,7 @@ namespace InfrastructureLayer.Interface
        
         public bool VerifyPasswordHash(string Password, byte[] PasswordHash, byte[] PasswordSalt);
 
-        
-
+       
+        string CreateToken(UserRegister user);
     }
 }

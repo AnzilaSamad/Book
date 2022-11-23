@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InfrastructureLayer", "Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InfrastructureLayerBook", "InfrastructureLayerBook", "{ADD43A94-04E7-492C-9059-A85685098B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiLayer", "WebApiLayer\WebApiLayer.csproj", "{524E5EBE-611C-48B9-A35C-8A0BEDC8F8A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiLayer", "WebApiLayer\WebApiLayer.csproj", "{524E5EBE-611C-48B9-A35C-8A0BEDC8F8A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

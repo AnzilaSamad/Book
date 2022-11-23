@@ -16,9 +16,12 @@ namespace WebApiLayer.Controllers
     {
 
         private readonly IRegister _register;
-        public UserController(IRegister register)
+        private readonly ILogin _login;
+
+        public UserController(IRegister register,ILogin login)
         {
             _register = register;
+            _login = login;
         }
        
             [HttpPost]
@@ -38,7 +41,22 @@ namespace WebApiLayer.Controllers
         {
             return _register.Get();
         }
+        [HttpPost]
+        [Route("Login")]
+        public IActionResult Login(UserLoginDto userLoginDto)
+        {
+            var result = _login.Login(userLoginDto);
+            if (result == "user not found")
+            {
+                return BadRequest("user not found");
+            }
+            else if (result == "wrong password")
+            {
+                return BadRequest("wrong password");
+            }
+            return Ok(result);
+        }
 
-        
+
     }
 }

@@ -84,3 +84,4 @@ D:\BookVerse\book\WebApiLayer\bin\Debug\net6.0\AutoMapper.dll
 D:\BookVerse\book\WebApiLayer\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\BookVerse\book\WebApiLayer\bin\Debug\net6.0\Humanizer.dll
 D:\BookVerse\book\WebApiLayer\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\BookVerse\book\WebApiLayer\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
