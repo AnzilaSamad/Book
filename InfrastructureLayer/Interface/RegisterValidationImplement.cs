@@ -17,11 +17,13 @@ namespace InfrastructureLayer.Interface
     public class RegisterValidationImplement : IRegisterValidation
     {
         private readonly IConfiguration _configuration;
+        private readonly AppDbContext _appDbContext;
 
-        public RegisterValidationImplement(IConfiguration configuration)
+        public RegisterValidationImplement(IConfiguration configuration, AppDbContext appDbContext)
         {
 
             _configuration = configuration;
+            _appDbContext = appDbContext;
         }
 
         public void CreatePasswordHash(string Password, out byte[] PasswordHash, out byte[] PasswordSalt)
@@ -30,7 +32,24 @@ namespace InfrastructureLayer.Interface
             {
                 PasswordSalt = hmac.Key;
                 PasswordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(Password));
+
             }
+        }
+
+        public string CreateRandomPassword()
+        {
+            const string chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+            StringBuilder sb = new StringBuilder();
+            Random rnd = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+                int index = rnd.Next(chars.Length);
+                sb.Append(chars[index]);
+            }
+
+            return sb.ToString();
         }
 
         public string CreateToken(UserRegister user)
@@ -67,8 +86,21 @@ namespace InfrastructureLayer.Interface
             }
         }
 
+        public void Edit(PasswordChangeDto passwordChangeDto)
+        {
 
-        
+            UserRegister emp = _appDbContext.UserRegisterDetails.FirstOrDefault(i => i.Email == passwordChangeDto.Email);
+            if (emp != null)
+            {
+                emp.PasswordHash = passwordChangeDto.PasswordHash;
+                emp.PasswordSalt = passwordChangeDto.PasswordSalt;
+                _appDbContext.UserRegisterDetails.Update(emp);
+                _appDbContext.SaveChanges();
+            }
+        }
+
+
+
 
 
     }

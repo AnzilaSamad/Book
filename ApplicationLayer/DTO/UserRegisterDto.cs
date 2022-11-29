@@ -18,8 +18,8 @@ namespace ApplicationLayer.DTO
         [Column(TypeName = "VARCHAR(25)")]
         public string? Email { get; set; }
 
-        [Column(TypeName = "INT")]
-        public int PhoneNumber { get; set; }
+        [Column(TypeName = "DOUBLE")]
+        public  double PhoneNumber { get; set; }
 
         [Column(TypeName = "VARCHAR(10)")]
         public string? Password { get; set; }

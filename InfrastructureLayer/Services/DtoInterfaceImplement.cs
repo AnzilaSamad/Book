@@ -44,6 +44,7 @@ namespace InfrastructureLayer.Services
             _registerValidation.CreatePasswordHash(userRegisterDto.Password, out byte[] PasswordHash, out byte[] PasswordSalt);
                 var user = new UserRegister()
                 {
+                   
                     Username = userRegisterDto.Username,
                     Email = userRegisterDto.Email,
                     PhoneNumber = userRegisterDto.PhoneNumber,
@@ -56,6 +57,8 @@ namespace InfrastructureLayer.Services
            return "OK";
             
         }
+
+      
 
         public List<UserRegister> Get()
         {

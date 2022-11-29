@@ -25,11 +25,10 @@ namespace InfrastructureLayer.Migrations
             modelBuilder.Entity("DomainLayer.UserRegister", b =>
                 {
                     b.Property<string>("Username")
-                        .HasMaxLength(16)
-                        .HasColumnType("VARCHAR(16)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("VARCHAR(25)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -39,8 +38,8 @@ namespace InfrastructureLayer.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("INT");
+                    b.Property<double>("PhoneNumber")
+                        .HasColumnType("float");
 
                     b.HasKey("Username");
 

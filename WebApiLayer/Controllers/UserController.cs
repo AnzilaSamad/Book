@@ -17,11 +17,13 @@ namespace WebApiLayer.Controllers
 
         private readonly IRegister _register;
         private readonly ILogin _login;
+        private readonly IForgotPassword _forgotpassword; 
 
-        public UserController(IRegister register,ILogin login)
+        public UserController(IRegister register,ILogin login,IForgotPassword forgotPassword)
         {
             _register = register;
             _login = login;
+           _forgotpassword = forgotPassword;
         }
        
             [HttpPost]
@@ -32,8 +34,15 @@ namespace WebApiLayer.Controllers
             {
                 return BadRequest("not a valid request");
             }
-            _register.Add(userRegisterDto);
-            return Ok();
+            var temp = _register.Add(userRegisterDto);
+            if ( temp== "OK")
+            {
+                return Ok(temp);
+            }
+            else
+            {
+                return BadRequest(temp);
+            }
         }
         [HttpGet]
         [Route("Get")]
@@ -56,7 +65,21 @@ namespace WebApiLayer.Controllers
             }
             return Ok(result);
         }
-
+        [HttpPost]
+        [Route("ForgotPassword")]
+        public IActionResult Forgot(ForgotPasswordDto forgotPasswordDto )
+        {
+            var temp=_forgotpassword.ForgotPassword(forgotPasswordDto);
+            if (temp== "Email sent")
+            { 
+                return Ok(temp); 
+            }
+            else
+            {
+                return BadRequest(temp);
+            }
+              
+        }
 
     }
 }

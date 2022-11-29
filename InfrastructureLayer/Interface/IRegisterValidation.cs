@@ -16,5 +16,8 @@ namespace InfrastructureLayer.Interface
 
        
         string CreateToken(UserRegister user);
+
+        string CreateRandomPassword();
+        void Edit(PasswordChangeDto passwordChangeDto);
     }
 }

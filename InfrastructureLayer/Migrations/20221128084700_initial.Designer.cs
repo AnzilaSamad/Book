@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InfrastructureLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221123090426_firstone")]
-    partial class firstone
+    [Migration("20221128084700_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,11 +27,10 @@ namespace InfrastructureLayer.Migrations
             modelBuilder.Entity("DomainLayer.UserRegister", b =>
                 {
                     b.Property<string>("Username")
-                        .HasMaxLength(16)
-                        .HasColumnType("VARCHAR(16)");
+                        .HasColumnType("nvarchar(16)");
 
                     b.Property<string>("Email")
-                        .HasColumnType("VARCHAR(25)");
+                        .HasColumnType("nvarchar(25)");
 
                     b.Property<byte[]>("PasswordHash")
                         .IsRequired()
@@ -41,8 +40,8 @@ namespace InfrastructureLayer.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<int>("PhoneNumber")
-                        .HasColumnType("INT");
+                    b.Property<double>("PhoneNumber")
+                        .HasColumnType("float");
 
                     b.HasKey("Username");
 

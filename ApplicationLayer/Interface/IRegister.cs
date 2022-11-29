@@ -13,6 +13,7 @@ namespace ApplicationLayer.Interface
         string Add(UserRegisterDto userRegisterDto);
 
         List<UserRegister> Get();
+        
        
 
     }

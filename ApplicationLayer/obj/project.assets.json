@@ -5349,11 +5349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BookVerse\\book\\ApplicationLayer\\ApplicationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\asamad\\source\\repos\\Book\\ApplicationLayer\\ApplicationLayer.csproj",
       "projectName": "ApplicationLayer",
-      "projectPath": "D:\\BookVerse\\book\\ApplicationLayer\\ApplicationLayer.csproj",
+      "projectPath": "C:\\Users\\asamad\\source\\repos\\Book\\ApplicationLayer\\ApplicationLayer.csproj",
       "packagesPath": "C:\\Users\\asamad\\.nuget\\packages\\",
-      "outputPath": "D:\\BookVerse\\book\\ApplicationLayer\\obj\\",
+      "outputPath": "C:\\Users\\asamad\\source\\repos\\Book\\ApplicationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\asamad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5370,8 +5370,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\BookVerse\\book\\DomainLayer\\DomainLayer.csproj": {
-              "projectPath": "D:\\BookVerse\\book\\DomainLayer\\DomainLayer.csproj"
+            "C:\\Users\\asamad\\source\\repos\\Book\\DomainLayer\\DomainLayer.csproj": {
+              "projectPath": "C:\\Users\\asamad\\source\\repos\\Book\\DomainLayer\\DomainLayer.csproj"
             }
           }
         }
@@ -5439,7 +5439,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,15 +13,15 @@ namespace DomainLayer
     {
         [Key]
        
-        [Column(TypeName = "VARCHAR")]
-        [StringLength(16, MinimumLength = 8, ErrorMessage = "Username should be atleast 8 characters")]
+        //[Column(TypeName = "varchar")]
+        //[StringLength(16, MinimumLength = 8, ErrorMessage = "Username should be atleast 8 characters")]
         public string? Username { get; set; }
       
-        [Column(TypeName = "VARCHAR(25)")]
-        public string? Email { get; set; }
+        //[Column(TypeName = "varchar(25)")]
+        public string Email { get; set; }
        
-        [Column(TypeName = "INT")]
-        public int PhoneNumber { get; set; }
+        //[Column(TypeName = "DOUBLE")]
+        public double PhoneNumber { get; set; }
 
      
         public byte[] PasswordHash { get; set; } = new byte[32];

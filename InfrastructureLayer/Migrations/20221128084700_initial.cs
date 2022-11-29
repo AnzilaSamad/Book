@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace InfrastructureLayer.Migrations
 {
-    public partial class first : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,11 +13,11 @@ namespace InfrastructureLayer.Migrations
                 name: "UserRegisterDetails",
                 columns: table => new
                 {
-                    Username = table.Column<string>(type: "VARCHAR(16)", maxLength: 16, nullable: false),
-                    Email = table.Column<string>(type: "VARCHAR(25)", nullable: true),
-                    PhoneNumber = table.Column<int>(type: "INT", nullable: false),
-                    PasswordHash = table.Column<byte[]>(type: "VARBINARY(64)", nullable: false),
-                    PasswordSalt = table.Column<byte[]>(type: "VARBINARY(64)", nullable: false)
+                    Username = table.Column<string>(type: "nvarchar(16)", nullable: false),
+                    Email = table.Column<string>(type: "nvarchar(25)", nullable: true),
+                    PhoneNumber = table.Column<double>(type: "float", nullable: false),
+                    PasswordHash = table.Column<byte[]>(type: "varbinary(max)", nullable: false),
+                    PasswordSalt = table.Column<byte[]>(type: "varbinary(max)", nullable: false)
                 },
                 constraints: table =>
                 {

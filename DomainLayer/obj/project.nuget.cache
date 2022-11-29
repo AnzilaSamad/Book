@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KoVFHo+aCo84Pf2R3gvQjI1yZscH7rSww41ApGow4lK52dIcZAtmlglkRqvPb/0//4TZwVIsuBJJtwX9kgOQsw==",
+  "dgSpecHash": "YEk6MDn2/jR7s+qp0y2xkbu42rr+N6qcbKHaZXpl0+bdeUD7NQ7xoTwb9S2gShEZI1P89GBbMnm2bE9GuG9uVA==",
   "success": true,
-  "projectFilePath": "D:\\BookVerse\\book\\DomainLayer\\DomainLayer.csproj",
+  "projectFilePath": "C:\\Users\\asamad\\source\\repos\\Book\\DomainLayer\\DomainLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asamad\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\asamad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
